@@ -37,6 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'markdown_deux',
+)
+TEMPLATE_DIRS = (
+'/Users/user/Documents/new_project/mysite/templates',
 )
 
 MIDDLEWARE_CLASSES = (
