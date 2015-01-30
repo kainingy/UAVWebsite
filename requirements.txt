@@ -1,3 +1,4 @@
+bootstrap-admin==0.3.3
 Django==1.7.3
 django-markdown-deux==1.0.5
 markdown2==2.3.0
