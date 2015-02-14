@@ -9,6 +9,7 @@
 - virtualenv
 
 #Usage
+- install virtualenv
 - pip intall -r requirements.txt
 - python manage.py migrate
 - python manage.py runserver
