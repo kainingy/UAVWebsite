@@ -4,6 +4,7 @@ from django.contrib.sites.models import Site
 from django import forms 
 from django.forms.widgets import *
 from django.core.mail import send_mail, BadHeaderError
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -11,7 +12,7 @@ class Post(models.Model) :
 	title = models.CharField(max_length = 100) 
 	category = models.CharField(max_length = 50, blank = True)
 	date_time = models.DateTimeField(auto_now_add = True)
-	content = models.TextField(blank = True, null = True)
+	content = RichTextField()
 
 	def get_absolute_url(self):
         	path = reverse('detail', kwargs={'id':self.id})
@@ -33,7 +34,7 @@ class ContactForm(forms.Form):
 class Member(models.Model) :
     name = models.CharField(max_length = 100)
     team = models.CharField(max_length = 50)
-    pic = models.CharField(max_length = 200)
+    pic = RichTextField(config_name = 'pic')
     linkedin = models.CharField(max_length = 100)
 
     def __str__(self):
@@ -41,6 +42,6 @@ class Member(models.Model) :
 
 
 class Gallary(models.Model) :
-    pic = models.CharField(max_length = 200)
+    pic = RichTextField(config_name = 'pic')
     team = models.CharField(max_length = 50)
 		

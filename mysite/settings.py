@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import tempfile
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -39,7 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'myapp',
     'markdown_deux',
+    'ckeditor'
 )
+
 TEMPLATE_DIRS = (
 '/Users/user/Documents/new_project/mysite/templates',
 )
@@ -73,6 +76,7 @@ DATABASES = {
     }
 }
 
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -91,4 +95,36 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'ck_static')
+MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'ck_media')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_CONFIGS = {
+     'default': {
+        'toolbar':[
+            ['Source','-','Save','NewPage','Preview','-','Templates'],
+            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'],
+            ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+            ['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'],
+            ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Link','Unlink','Anchor'],
+            ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
+            ['Styles','Format','Font','FontSize'],
+            ['TextColor','BGColor','syntaxhighlight'],
+            ['Maximize','ShowBlocks','-','About'],
+        ],
+        'width': 800,
+        'height': 400,
+        'toolbarCanCollapse': False,
+    },
+    'pic': {
+        'toolbar':[['Image']],    
+    }
+}

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-{% load markdown_deux_tags %}
 {% block content %}
 <div class="posts">
     {% for post in post_list %}
@@ -15,7 +14,7 @@
 
                 <div class="post-description">
                     <p>
-                        {{ post.content|markdown|truncatewords:15 }}
+                        {{ post.content|safe|truncatewords:10 }}
                     </p>
                 </div>
                 <a class="pure-button" href="{% url 'detail' id=post.id %}">Read More >>> </a>

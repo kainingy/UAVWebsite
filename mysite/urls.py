@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
+from django.conf.urls.static import static
+from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^tag(?P<tag>\w+)/$', 'myapp.views.search_tag', name = 'search_tag'),
     url(r'^contact/thanks', 'myapp.views.thankyou'),
     url(r'^contact/', 'myapp.views.contactview'),
-)
+    url(r'^ckeditor/', include('ckeditor.urls')),
+)+  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
