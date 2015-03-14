@@ -1,0 +1,139 @@
+body {
+  padding-top: 44px;
+}
+
+.nav-pills>li>a:hover {
+    background-color: #fcc341;
+}
+
+.bottom {
+  background-image: url("http://i1288.photobucket.com/albums/b484/gravity_marine/bottom-01_zps396a41e3.png");
+  background-size: 50% 100%;
+  height: 25px;
+}
+.nav a {
+  color: #000;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/bottom-01_zps396a41e3.png");
+  background-size: 100% 100%;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 100px;  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.neighborhood-guides {
+    /*border-bottom: 1px solid #dadada;*/
+    height: 550px;
+    background-color: #fff;
+}
+
+.neighborhood-guides h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.neighborhood-guides p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
+    height: 550px;
+    background-size: 100% 100%;
+    transition: background-image .25s ease-in-out;
+}
+
+.column-1 img, .column-2 img, .column-3 img, .column-4 img, .column-5 img, .column-6 img {
+    width: 100%;
+}
+
+.column-1 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-1-o-01_zps234efc63.png");
+}
+
+.column-1:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-1-x-01_zps29aed495.png");
+}
+
+.column-2 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-2-o-01_zpsfa504656.png");
+
+}
+
+.column-2:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-2-x-01_zpsa1c03b67.png");
+}
+
+.column-3 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-3-o-01_zpsbcdb94c8.png");
+}
+
+.column-3:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-3-x-01_zpse219b7f8.png");
+}
+
+.column-4 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-4-o-01_zpsf97dd58c.png");
+}
+
+.column-4:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-4-x-01_zps210bbded.png");
+}
+
+.column-5 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-5-o-01_zpsb9aa1bbc.png");
+}
+
+.column-5:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-5-x-01_zps144554b1.png");
+}
+
+.column-6 {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-6-o-01_zps5245ae58.png");
+}
+
+.column-6:hover {
+    background-image:url("http://i1288.photobucket.com/albums/b484/gravity_marine/header-6-x-01_zps3968d9ed.png");
+}

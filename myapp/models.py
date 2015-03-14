@@ -41,7 +41,7 @@ class Member(models.Model) :
         return self.name.encode('utf-8')
 
 
-class Gallary(models.Model) :
+class Gallery(models.Model) :
     pic = RichTextField(config_name = 'pic')
     team = models.CharField(max_length = 50)
 		

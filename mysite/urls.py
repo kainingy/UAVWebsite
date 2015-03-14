@@ -7,7 +7,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
     url(r'^$', 'myapp.views.index', name = 'index'),
     url(r'^blog/','myapp.views.home', name = 'home'),
     url(r'^admin/', include(admin.site.urls)),
@@ -17,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^contact/thanks', 'myapp.views.thankyou'),
     url(r'^contact/', 'myapp.views.contactview'),
     url(r'^ckeditor/', include('ckeditor.urls')),
+    url(r'^gallery/', 'myapp.views.galleryView'),
 )+  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

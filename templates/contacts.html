@@ -1,6 +1,7 @@
 {% extends "base.html" %}
-
+{% block title%} Contact Us {% endblock %}
 {% block content %}
+<center>
 <head>
     <title>Contact us</title>
 </head>
@@ -17,7 +18,8 @@
         <table>
             {{ form.as_table }}
         </table>
-        <input type="submit" value="Submit">
+        <button type="submit" class="btn btn-default">Submit</button>
     </form>
 </body>
+</center>
 {% endblock %}
