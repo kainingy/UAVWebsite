@@ -1,6 +1,3 @@
-# Test
-  Demo (Used for test)
-
 # Requirments
 bootstrap-admin==0.3.3
 Django==1.7.3
